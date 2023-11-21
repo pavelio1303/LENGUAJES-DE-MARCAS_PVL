@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Pablo Jiménez Sánchez--> 
+
+<!DOCTYPE pokedex [
+    <!ELEMENT pokedex (pokemon+)>
+    <!ELEMENT pokemon (name, types, abilities, baseStats, experience, legendary?)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT types (type+)>
+    <!ELEMENT type (#PCDATA)>
+    <!ELEMENT abilities (ability+)>
+    <!ELEMENT ability (#PCDATA)>
+    <!ELEMENT baseStats (HP, ATK, DEF)>
+    <!ELEMENT HP (#PCDATA)>
+    <!ELEMENT ATK (#PCDATA)>
+    <!ELEMENT DEF (#PCDATA)>
+    <!ELEMENT experience (#PCDATA)>
+    <!ELEMENT legendary EMPTY>
+]>
+
+<!-- completa este documento XML de forma que se cumplan las restricciones superiores (DTD) -->
+<!-- Inserta al menos dos pokemons -->
+
+<pokedex>
+    <pokemon>
+        <name>Torterra</name>
+        <types>
+            <type>Planta</type>
+            <type>Tierra</type>
+        </types>
+        <abilities>
+            <ability>Espesura</ability>
+            <ability>Caparazón</ability>
+        </abilities>
+        <baseStats>
+            <HP>95</HP>
+            <ATK>109</ATK>
+            <DEF>105</DEF>
+        </baseStats>
+        <experience>34593</experience>
+    </pokemon>
+    <pokemon>
+        <name>Kyogre</name>
+        <types>
+            <type>Agua</type>
+        </types>
+        <abilities>
+            <ability>Llovizna</ability>
+        </abilities>
+        <baseStats>
+            <HP>100</HP>
+            <ATK>100</ATK>
+            <DEF>90</DEF>
+        </baseStats>
+        <experience>5261</experience>
+        <legendary />
+    </pokemon>
+</pokedex>

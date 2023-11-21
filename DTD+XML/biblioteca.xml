@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>  
+    <!ELEMENT libro (nombre,autor*,fecha_de_publicacion)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT fecha_de_publicacion (dia?,mes?,anio?)> <!-- Ponemos aquí '?' porque puede haber cualquiera 
+                                                     de estos elementos o ninguno, y no en la fecha_de_publicación 
+                                                     que hay dentro de libro, si la ponemo fuera del paréntesis ()?
+                                                    es que este todo o nada-->
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>
+
+<biblioteca>
+    <libro>
+        <nombre>Las Golondrinas Tuertas</nombre>
+        <autor>Garcilio del Secarral</autor>
+        <fecha_de_publicacion>
+            <dia>16</dia>
+            <mes>Marzo</mes>
+            <anio>1895</anio>
+        </fecha_de_publicacion>
+    </libro>
+</biblioteca>

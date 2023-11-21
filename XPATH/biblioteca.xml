@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro>
+        <titulo>El Gran Gatsby</titulo>
+        <autor>F. Scott Fitzgerald</autor>
+        <genero>Novela</genero>
+        <año>1925</año>
+    </libro>
+    <libro>
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <genero>Novela</genero>
+        <año>1967</año>
+    </libro>
+    <libro>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <genero>Novela distópica</genero>
+        <año>1949</año>
+    </libro>
+    <libro>
+        <titulo>Don Quijote de la Mancha</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <genero>Novela de caballerías</genero>
+        <año>1605</año>
+    </libro>
+    <libro>
+        <titulo>Matar un ruiseñor</titulo>
+        <autor>Harper Lee</autor>
+        <genero>Novela</genero>
+        <año>1960</año>
+    </libro>
+    <libro>
+        <titulo>Los Juegos del Hambre</titulo>
+        <autor>Suzanne Collins</autor>
+        <genero>Novela distópica</genero>
+        <año>2008</año>
+    </libro>
+    <libro>
+        <titulo>El Hobbit</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <genero>Fantasía</genero>
+        <año>1937</año>
+    </libro>
+    <libro>
+        <titulo>Orgullo y prejuicio</titulo>
+        <autor>Jane Austen</autor>
+        <genero>Novela</genero>
+        <año>1813</año>
+    </libro>
+    <libro>
+        <titulo>Ulises</titulo>
+        <autor>James Joyce</autor>
+        <genero>Novela</genero>
+        <año>1922</año>
+    </libro>
+    <libro>
+        <titulo>El Gran Gatsby</titulo>
+        <autor>F. Scott Fitzgerald</autor>
+        <genero>Novela</genero>
+        <año>1925</año>
+    </libro>
+    <libro>
+        <titulo>En busca del tiempo perdido</titulo>
+        <autor>Marcel Proust</autor>
+        <genero>Novela</genero>
+        <año>1913</año>
+    </libro>
+    <libro>
+        <titulo>El Código Da Vinci</titulo>
+        <autor>Dan Brown</autor>
+        <genero>Thriller</genero>
+        <año>2003</año>
+    </libro>
+    <libro>
+        <titulo>La Sombra del Viento</titulo>
+        <autor>Carlos Ruiz Zafón</autor>
+        <genero>Novela</genero>
+        <año>2001</año>
+    </libro>
+    <libro>
+        <titulo>Los Pilares de la Tierra</titulo>
+        <autor>Ken Follett</autor>
+        <genero>Histórica</genero>
+        <año>1989</año>
+    </libro>
+    <libro>
+        <titulo>Harry Potter y la Piedra Filosofal</titulo>
+        <autor>J.K. Rowling</autor>
+        <genero>Fantasía</genero>
+        <año>1997</año>
+    </libro>
+    <libro>
+        <titulo>Crónica de una muerte anunciada</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <genero>Novela</genero>
+        <año>1981</año>
+    </libro>
+    <libro>
+        <titulo>El Alquimista</titulo>
+        <autor>Paulo Coelho</autor>
+        <genero>Novela</genero>
+        <año>1988</año>
+    </libro>
+    <libro>
+        <titulo>La Odisea</titulo>
+        <autor>Homer</autor>
+        <genero>Poesía épica</genero>
+        <año>Siglo VIII a.C.</año>
+    </libro>
+    <libro>
+        <titulo>Las Aventuras de Sherlock Holmes</titulo>
+        <autor>Arthur Conan Doyle</autor>
+        <genero>Novela de misterio</genero>
+        <año>1892</año>
+    </libro>
+    <libro>
+        <titulo>Los Miserables</titulo>
+        <autor>Victor Hugo</autor>
+        <genero>Novela histórica</genero>
+        <año>1862</año>
+    </libro>
+    <libro>
+        <titulo>El Retrato de Dorian Gray</titulo>
+        <autor>Oscar Wilde</autor>
+        <genero>Novela gótica</genero>
+        <año>1890</año>
+    </libro>
+    <libro>
+        <titulo>El Principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <genero>Novela infantil</genero>
+        <año>1943</año>
+    </libro>
+    <libro>
+        <titulo>La Metamorfosis</titulo>
+        <autor>Franz Kafka</autor>
+        <genero>Novela corta</genero>
+        <año>1915</año>
+    </libro>
+    <libro>
+        <titulo>Drácula</titulo>
+        <autor>Bram Stoker</autor>
+        <genero>Novela de terror</genero>
+        <año>1897</año>
+    </libro>
+    <libro>
+        <titulo>El Señor de los Anillos</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <genero>Fantasía</genero>
+        <año>1954</año>
+    </libro>
+    <libro>
+        <titulo>La Carretera</titulo>
+        <autor>Cormac McCarthy</autor>
+        <genero>Novela post-apocalíptica</genero>
+        <año>2006</año>
+    </libro>
+    <libro>
+        <titulo>Guerra y Paz</titulo>
+        <autor>León Tolstói</autor>
+        <genero>Novela histórica</genero>
+        <año>1869</año>
+    </libro>
+    <libro>
+        <titulo>La Ilíada</titulo>
+        <autor>Homer</autor>
+        <genero>Poesía épica</genero>
+        <año>Siglo VIII a.C.</año>
+    </libro>
+    <libro>
+        <titulo>La Odisea</titulo>
+        <autor>Homer</autor>
+        <genero>Poesía épica</genero>
+        <año>Siglo VIII a.C.</año>
+    </libro>
+    <libro>
+        <titulo>Mujer en punto cero</titulo>
+        <autor>Nawal El Saadawi</autor>
+        <genero>Novela</genero>
+        <año>1975</año>
+    </libro>
+    <libro>
+        <titulo>Los Hombres me explican cosas</titulo>
+        <autor>Rebecca Solnit</autor>
+        <genero>Ensayo</genero>
+        <año>2014</año>
+    </libro>
+    <libro>
+        <titulo>Rayuela</titulo>
+        <autor>Julio Cortázar</autor>
+        <genero>Novela experimental</genero>
+        <año>1963</año>
+    </libro>
+    <libro>
+        <titulo>La Ciudad y los Perros</titulo>
+        <autor>Mario Vargas Llosa</autor>
+        <genero>Novela</genero>
+        <año>1962</año>
+    </libro>
+    <libro>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <genero>Novela distópica</genero>
+        <año>1949</año>
+    </libro>
+    <libro>
+        <titulo>Hamlet</titulo>
+        <autor>William Shakespeare</autor>
+        <genero>Tragedia</genero>
+        <año>Siglo XVII</año>
+    </libro>
+    <libro>
+        <titulo>Los Versos Satánicos</titulo>
+        <autor>Salman Rushdie</autor>
+        <genero>Novela</genero>
+        <año>1988</año>
+    </libro>
+    <libro>
+        <titulo>La Noche de los Tiempos</titulo>
+        <autor>Antonio Muñoz Molina</autor>
+        <genero>Novela histórica</genero>
+        <año>2009</año>
+    </libro>
+    <libro>
+        <titulo>La Insostenible Levedad del Ser</titulo>
+        <autor>Milan Kundera</autor>
+        <genero>Novela filosófica</genero>
+        <año>1984</año>
+    </libro>
+    <libro>
+        <titulo>Las Correcciones</titulo>
+        <autor>Jonathan Franzen</autor>
+        <genero>Novela</genero>
+        <año>2001</año>
+    </libro>
+    <libro>
+        <titulo>El Lobo Estepario</titulo>
+        <autor>Hermann Hesse</autor>
+        <genero>Novela</genero>
+        <año>1927</año>
+    </libro>
+    <libro>
+        <titulo>Moby-Dick</titulo>
+        <autor>Herman Melville</autor>
+        <genero>Novela de aventuras</genero>
+        <año>1851</año>
+    </libro>
+    <libro>
+        <titulo>Los Pájaros</titulo>
+        <autor>Daphne du Maurier</autor>
+        <genero>Novela de terror</genero>
+        <año>1952</año>
+    </libro>
+    <libro>
+        <titulo>La Carretera al Oeste</titulo>
+        <autor>John Steinbeck</autor>
+        <genero>Novela histórica</genero>
+        <año>1939</año>
+    </libro>
+    <libro>
+        <titulo>La Casa de los Espíritus</titulo>
+        <autor>Isabel Allende</autor>
+        <genero>Novela mágica</genero>
+        <año>1982</año>
+    </libro>
+    <libro>
+        <titulo>El Cazador de Historias</titulo>
+        <autor>Eduardo Galeano</autor>
+        <genero>Ensayo</genero>
+        <año>2015</año>
+    </libro>
+    <libro>
+        <titulo>El Diario de Ana Frank</titulo>
+        <autor>Ana Frank</autor>
+        <genero>Diario</genero>
+        <año>1947</año>
+    </libro>
+    <libro>
+        <titulo>Los Hombres Me Explican Cosas</titulo>
+        <autor>Rebecca Solnit</autor>
+        <genero>Ensayo</genero>
+        <año>2014</año>
+    </libro>
+    <libro>
+        <titulo>Rayuela</titulo>
+        <autor>Julio Cortázar</autor>
+        <genero>Novela experimental</genero>
+        <año>1963</año>
+    </libro>
+    <libro>
+        <titulo>La Ciudad y los Perros</titulo>
+        <autor>Mario Vargas Llosa</autor>
+        <genero>Novela</genero>
+        <año>1962</año>
+    </libro>
+    <libro>
+        <titulo>La Insoportable Levedad del Ser</titulo>
+        <autor>Milan Kundera</autor>
+        <genero>Novela filosófica</genero>
+        <año>1984</año>
+    </libro>
+    <libro>
+        <titulo>Las Correcciones</titulo>
+        <autor>Jonathan Franzen</autor>
+        <genero>Novela</genero>
+        <año>2001</año>
+    </libro>
+    <libro>
+        <titulo>El Padrino</titulo>
+        <autor>Mario Puzo</autor>
+        <genero>Novela de crimen</genero>
+        <año>1969</año>
+    </libro>
+    <libro>
+        <titulo>El Corazón de las Tinieblas</titulo>
+        <autor>Joseph Conrad</autor>
+        <genero>Novela corta</genero>
+        <año>1899</año>
+    </libro>
+    <libro>
+        <titulo>El Informe de Brodie</titulo>
+        <autor>Jorge Luis Borges</autor>
+        <genero>Cuentos</genero>
+        <año>1970</año>
+    </libro>
+    <libro>
+        <titulo>Robinson Crusoe</titulo>
+        <autor>Daniel Defoe</autor>
+        <genero>Aventura</genero>
+        <año>1719</año>
+    </libro>
+    <libro>
+        <titulo>Los Cazadores de Mamuts</titulo>
+        <autor>Jean M. Auel</autor>
+        <genero>Ficción prehistórica</genero>
+        <año>1980</año>
+    </libro>
+    <libro>
+        <titulo>Veinte Mil Leguas de Viaje Submarino</titulo>
+        <autor>Jules Verne</autor>
+        <genero>Aventura</genero>
+        <año>1870</año>
+    </libro>
+    <libro>
+        <titulo>Crónica de una Muerte Anunciada</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <genero>Novela</genero>
+        <año>1981</año>
+    </libro>
+    <libro>
+        <titulo>El Aleph</titulo>
+        <autor>Jorge Luis Borges</autor>
+        <genero>Cuentos</genero>
+        <año>1949</año>
+    </libro>
+    <libro>
+        <titulo>Ensayos</titulo>
+        <autor>Michel de Montaigne</autor>
+        <genero>Ensayo</genero>
+        <año>1580</año>
+    </libro>
+    <libro>
+        <titulo>Ve y Pon un Centinela</titulo>
+        <autor>Harper Lee</autor>
+        <genero>Novela</genero>
+        <año>2015</año>
+    </libro>
+    <libro>
+        <titulo>Los Crímenes de la Calle Morgue</titulo>
+        <autor>Edgar Allan Poe</autor>
+        <genero>Novela de misterio</genero>
+        <año>1841</año>
+    </libro>
+    <libro>
+        <titulo>Un Mundo Feliz</titulo>
+        <autor>Aldous Huxley</autor>
+        <genero>Novela distópica</genero>
+        <año>1932</año>
+    </libro>
+    <libro>
+        <titulo>El Silmarillion</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <genero>Fantasía</genero>
+        <año>1977</año>
+    </libro>
+    <libro>
+        <titulo>El Principe</titulo>
+        <autor>Niccolò Machiavelli</autor>
+        <genero>Política</genero>
+        <año>1532</año>
+    </libro>
+    <libro>
+        <titulo>El Nombre de la Rosa</titulo>
+        <autor>Umberto Eco</autor>
+        <genero>Novela histórica</genero>
+        <año>1980</año>
+    </libro>
+    <libro>
+        <titulo>El Asesino Ciego</titulo>
+        <autor>Margaret Atwood</autor>
+        <genero>Novela de misterio</genero>
+        <año>2000</año>
+    </libro>
+    <libro>
+        <titulo>El Túnel</titulo>
+        <autor>Ernesto Sabato</autor>
+        <genero>Novela existencialista</genero>
+        <año>1948</año>
+    </libro>
+    <libro>
+        <titulo>Los detectives salvajes</titulo>
+        <autor>Roberto Bolaño</autor>
+        <genero>Novela</genero>
+        <año>1998</año>
+    </libro>
+    <libro>
+        <titulo>La Playa</titulo>
+        <autor>Alex Garland</autor>
+        <genero>Aventura</genero>
+        <año>1996</año>
+    </libro>
+    <libro>
+        <titulo>Por Quién Doblan las Campanas</titulo>
+        <autor>Ernest Hemingway</autor>
+        <genero>Novela bélica</genero>
+        <año>1940</año>
+    </libro>
+    <libro>
+        <titulo>El Gran Inquisidor</titulo>
+        <autor>Fiodor Dostoievski</autor>
+        <genero>Religión</genero>
+        <año>1880</año>
+    </libro>
+    <libro>
+        <titulo>Los Crímenes de la Calle Morgue</titulo>
+        <autor>Edgar Allan Poe</autor>
+        <genero>Novela de misterio</genero>
+        <año>1841</año>
+    </libro>
+    <libro>
+        <titulo>Los Crímenes de la Calle Morgue</titulo>
+        <autor>Edgar Allan Poe</autor>
+        <genero>Novela de misterio</genero>
+        <año>1841</año>
+    </libro>
+    <libro>
+        <titulo>El Castillo</titulo>
+        <autor>Franz Kafka</autor>
+        <genero>Novela</genero>
+        <año>1926</año>
+    </libro>
+</biblioteca>

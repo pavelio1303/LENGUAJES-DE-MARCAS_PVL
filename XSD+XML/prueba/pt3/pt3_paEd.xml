@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pablo Jiménez y Edu Mendieta -->
+<!--- Se desea almacenar información de sistemas estelares.
+- Cada sistema estelar tiene una lista de planetas (entre 0 y 10).
+- Cada planeta tiene una lista de satélites (entre 0 y 5).
+
+- De los sistemas estelares queremos conocer su nombre, la masa y la fecha de descubrimiento (opcional).
+- De los planetas queremos conocer su nombre, tipo y si es habitable o no.
+- De los satélites queremos conocer su periodo orbital (horas), y si tiene atmósfera o no. -->
+<listaSistemas xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="pt3_paEd.xsd">
+    <sistemaEstelar>
+        <nombre>Alfa Tauri</nombre>
+        <masa>34</masa>
+        <fecha>2054-02-12</fecha>
+        <planetas>
+            <planeta>
+                <nombrePlaneta>Júpiter</nombrePlaneta>
+                <tipo>gaseoso</tipo>
+                <habitable>true</habitable>
+                <satelites>
+                    <satelite>
+                        <periodoOrbital>29</periodoOrbital>
+                        <atmosfera>false</atmosfera>
+                    </satelite>
+                </satelites>
+            </planeta>
+        </planetas>
+    </sistemaEstelar>
+    <sistemaEstelar>
+        <nombre>Beta Domo</nombre>
+        <masa>79</masa>
+        <planetas>
+            <planeta>
+                <nombrePlaneta>Centollo</nombrePlaneta>
+                <tipo>rocoso</tipo>
+                <habitable>false</habitable>
+                <satelites>
+                    <satelite>
+                        <periodoOrbital>3</periodoOrbital>
+                        <atmosfera>false</atmosfera>
+                    </satelite>
+                    <satelite>
+                        <periodoOrbital>27</periodoOrbital>
+                        <atmosfera>false</atmosfera>
+                    </satelite>
+                </satelites>
+            </planeta>
+            <planeta>
+                <nombrePlaneta>Cangrejo</nombrePlaneta>
+                <tipo>oceanico</tipo>
+                <habitable>true</habitable>
+                <satelites>
+                    <satelite>
+                        <periodoOrbital>8</periodoOrbital>
+                        <atmosfera>true</atmosfera>
+                    </satelite>
+                </satelites>
+            </planeta>
+        </planetas>
+    </sistemaEstelar>
+</listaSistemas>

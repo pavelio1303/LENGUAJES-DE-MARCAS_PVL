@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Crea un fichero XML con DTD integrado que cumpla los siguientes requisitos:
+1.Elemento raíz concesionario
+2.Concesionario está compuesto por coches (al menos uno)
+3.los coches tienen marca, modelo, color, número de puertas y plazas
+4.Los coches pueden ser eléctricos o no
+5.Cada coche tiene una lista de extras(puede no haber extras)
+6.El extra se compone de nombre, descripción(opcional) y precio
+7.Los coches pueden ser automáticos o no-->
+
+<!DOCTYPE concesionario [
+    <!ELEMENT concesionario (coche+)>
+    <!ELEMENT coche (marca, modelo, numeroPuertas, plazas, electrico?, automatico?, extras?)>
+        <!ATTLIST coche color CDATA #IMPLIED> <!-- CDATA quiere decir que es texto, #REQUIRED indica que es requerido sí o sí
+                                                                                    #IMPLIED indica que es opcional-->
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+    <!ELEMENT numeroPuertas (#PCDATA)>
+    <!ELEMENT plazas (#PCDATA)>
+    <!ELEMENT electrico EMPTY>
+    <!ELEMENT extras (extra+)>
+    <!ELEMENT extra (nombreExtra, descripcionExtra?, precioExtra)>
+    <!ELEMENT nombreExtra (#PCDATA)>
+    <!ELEMENT descripcionExtra (#PCDATA)>
+    <!ELEMENT precioExtra (#PCDATA)>
+    <!ELEMENT automatico EMPTY>
+]>
+<concesionario>
+    <coche color ="Turquesa B5FFFF">
+        <marca>FIAT</marca>
+        <modelo>500</modelo>
+        <numeroPuertas>3</numeroPuertas>
+        <plazas>4</plazas>
+        <automatico />
+        <extras>
+            <extra>
+                <nombreExtra>Techo solar</nombreExtra>
+                <precioExtra>400 euros</precioExtra>
+            </extra>
+            
+        </extras>
+    </coche>
+</concesionario>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listaCursos [
+    <!ELEMENT listaCursos (curso+)>
+
+    <!ELEMENT curso (alumno+)>
+
+    <!ELEMENT alumno (nombreAlum,primerApellidoAlum,segundoApellidoAlum?,asignaturas)>
+    <!ATTLIST alumno dni CDATA #REQUIRED>
+
+    <!ELEMENT nombreAlum (#PCDATA)>
+    <!ELEMENT primerApellidoAlum (#PCDATA)>
+    <!ELEMENT segundoApellidoAlum (#PCDATA)>
+    
+    <!ELEMENT asignaturas (asignatura+)>
+
+    <!ELEMENT asignatura (nombreAs,profesor)>
+    <!ATTLIST asignatura codigo CDATA #REQUIRED>
+    
+    <!ELEMENT nombreAs (#PCDATA)>
+    
+    <!ELEMENT profesor (nombreProf,primerApellidoProf,segundoAprellidoProf?)>
+    <!ATTLIST profesor nrp CDATA #REQUIRED>
+
+    <!ELEMENT nombreProf (#PCDATA)>
+    <!ELEMENT primerApellidoProf (#PCDATA)>
+    <!ELEMENT segundoApellidoProf (#PCDATA)>
+]>
+<listaCursos>
+    <curso>
+        <alumno dni="68468895P">
+            <nombreAlum>Jaime</nombreAlum>  
+            <primerApellidoAlum>Bonal</primerApellidoAlum>
+            <segundoApellidoAlum>Vilchez</segundoApellidoAlum>
+            <asignaturas>
+                <asignatura codigo="29">
+                    <nombreAs>Matemáticas</nombreAs>
+                    <profesor nrp="345">
+                        <nombreProf>Miguel</nombreProf>
+                        <primerApellidoProf>Torres</primerApellidoProf>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+        <alumno dni="68468895P">
+            <nombreAlum>Jaime</nombreAlum>  
+            <primerApellidoAlum>Bonal</primerApellidoAlum>
+            <segundoApellidoAlum>Vilchez</segundoApellidoAlum>
+            <asignaturas>
+                <asignatura codigo="29">
+                    <nombreAs>Matemáticas</nombreAs>
+                    <profesor nrp="345">
+                        <nombreProf>Miguel</nombreProf>
+                        <primerApellidoProf>Torres</primerApellidoProf>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+    </curso>
+    
+</listaCursos>

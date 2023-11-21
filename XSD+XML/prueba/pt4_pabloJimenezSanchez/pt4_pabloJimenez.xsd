@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pablo Jiménez Sánchez-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cuartoMilenio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="actividad" minOccurs="3" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="5"></xs:minLength>
+                                        <xs:maxLength value="50"></xs:maxLength>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ocurrencias">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="10"></xs:minInclusive>
+                                        <xs:maxInclusive value="1000"></xs:maxInclusive>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="investigador" maxOccurs="2">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"></xs:element>
+                                        <xs:element name="DNI">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[0-9]{8}[A-Z]"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="edad">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="18"></xs:minInclusive>
+                                                    <xs:maxInclusive value="80"></xs:maxInclusive>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="evidencias">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="evidencia" maxOccurs="unbounded"> <!-- He dejado que haya como mínimo una evidencia puesto que entran los testimonios y algun bulo hay siempre-->
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="tipo">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:enumeration value="foto"></xs:enumeration>
+                                                                <xs:enumeration value="audio"></xs:enumeration>
+                                                                <xs:enumeration value="video"></xs:enumeration>
+                                                                <xs:enumeration value="testimonio"></xs:enumeration>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="fecha" type="xs:date"></xs:element>
+                                                    <xs:element name="ubicacion" minOccurs="0"></xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="pruebas" type="xs:boolean" use="required"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

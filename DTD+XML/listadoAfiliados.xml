@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listadoAfiliados [
+    <!ELEMENT listadoAfiliados (afiliado+)>
+    <!ELEMENT afiliado ((DNI | NIE), nombre, apellidos, situacionLaboral, fechaNacimiento, listadoBajas, listadoPrestaciones)>
+
+    <!ELEMENT situacionLaboral (enParo | enActivo | jubilado | edadNoLaboral)>
+
+    <!ELEMENT fechaNacimiento (dia, mes, anio)>
+
+    <!ELEMENT listadoBajas (baja)*>
+    <!ELEMENT baja (causa, fechaInicio, fechaFin?)>
+
+    <!ELEMENT listadoPrestaciones (prestacion*)>
+    <!ELEMENT prestacion (cantidad, fechaInicio, fechaFin)>
+
+    <!ELEMENT DNI (#PCDATA)>
+    <!ELEMENT NIF (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+
+    <!ELEMENT enParo EMPTY>
+    <!ELEMENT enActivo EMPTY>
+    <!ELEMENT jubilado EMPTY>
+    <!ELEMENT situacionNoLaboral EMPTY>
+
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+
+    <!ELEMENT causa (#PCDATA)>
+    <!ELEMENT fechaInicio (#PCDATA)>
+    <!ELEMENT fechaFin (#PCDATA)>
+    
+    <!ELEMENT cantidad (#PCDATA)>
+
+
+
+]>
+<listadoAfiliados>
+</listadoAfiliados>

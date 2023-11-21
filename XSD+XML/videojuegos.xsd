@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="videojuegos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="videojuego" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="descripcion" type="xs:string"/>
+                            <xs:element name="fecha">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dia" type="xs:integer" minOccurs="0"/>
+                                         <xs:element name="mes" type="xs:integer" minOccurs="0"/>
+                                         <xs:element name="anio" type="xs:integer"/>                                      
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="desarrollador"/>
+                            <xs:element name="distribuidor"/>
+                            <xs:element name="generos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="genero" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombreGenero"/>
+                                                    <xs:element name="descripcionGenero"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

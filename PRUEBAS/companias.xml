@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE CompaniasDelAnillo [
+    <!-- Completa este DTD de forma que valide el documento XML de abajo -->
+    <!-- EL documento XML NO puede ser editado -->
+    <!ELEMENT CompaniasDelAnillo (Compania)+>
+    <!ELEMENT Compania (Nombre, LugarCreacion, FechaFundacion, FechaDisolucion?, Lider, Criaturas)>
+    <!ATTLIST Compania tipo CDATA #REQUIRED>
+    <!ATTLIST Compania disuelta CDATA #IMPLIED>
+
+    <!ELEMENT Lider (Nombre, FechaInicioLiderazgo, FechaFinLiderazgo?)>
+
+    <!ELEMENT Criaturas (Hobbits | Mago | Hombre | Elfo | Enano)*>
+
+    <!ELEMENT Hobbits (Hobbit)+>
+    <!ELEMENT Hobbit (Nombre, Familia, NumeroPieNoCalza, DistanciaMaximaComarca, Anillo?)>
+    <!ELEMENT Anillo (Nombre, Inscripcion, FechaCreacion)>
+
+    <!ELEMENT Mago (Nombre, Edad)>
+    <!ELEMENT Hombre (Nombre, DestrezaEspada)>
+    <!ELEMENT Elfo (Nombre, DistanciaMaximaArco)>
+    <!ELEMENT Enano (Nombre, Estatura, CargaMaxima, LongitudBarba)>
+
+    <!ELEMENT Nombre (#PCDATA)>
+    <!ELEMENT LugarCreacion (#PCDATA)>
+    <!ELEMENT FechaFundacion (#PCDATA)>
+    <!ELEMENT FechaDisolucion (#PCDATA)>
+    <!ELEMENT FechaInicioLiderazgo (#PCDATA)>
+    <!ELEMENT FechaFinLiderazgo (#PCDATA)>
+    <!ELEMENT Familia (#PCDATA)>
+    <!ELEMENT NumeroPieNoCalza (#PCDATA)>
+    <!ELEMENT DistanciaMaximaComarca (#PCDATA)>
+    <!ELEMENT Inscripcion (#PCDATA)>
+    <!ELEMENT FechaCreacion (#PCDATA)>
+    <!ELEMENT Edad (#PCDATA)>
+    <!ELEMENT DestrezaEspada (#PCDATA)>
+    <!ELEMENT DistanciaMaximaArco (#PCDATA)>
+    <!ELEMENT Estatura (#PCDATA)>
+    <!ELEMENT CargaMaxima (#PCDATA)>
+    <!ELEMENT LongitudBarba (#PCDATA)>
+
+
+
+
+
+
+]>
+
+<CompaniasDelAnillo>
+    <Compania tipo="Aventurera" disuelta="true">
+        <Nombre>Compania1</Nombre>
+        <LugarCreacion>Tierra Media</LugarCreacion>
+        <FechaFundacion>01/01/2000</FechaFundacion>
+        <FechaDisolucion>01/01/2010</FechaDisolucion>
+        <Lider>
+            <Nombre>Gandalf</Nombre>
+            <FechaInicioLiderazgo>01/01/2000</FechaInicioLiderazgo>
+        </Lider>
+        <Criaturas>
+            <Hobbits>
+                <Hobbit>
+                    <Nombre>Frodo Bolsón</Nombre>
+                    <Familia>Bolsón</Familia>
+                    <NumeroPieNoCalza>7</NumeroPieNoCalza>
+                    <DistanciaMaximaComarca>100</DistanciaMaximaComarca>
+                    <Anillo>
+                        <Nombre>Anillo1</Nombre>
+                        <Inscripcion>Una inscripción aquí</Inscripcion>
+                        <FechaCreacion>01/01/1500</FechaCreacion>
+                    </Anillo>
+                </Hobbit>
+                <Hobbit>
+                    <Nombre>Samwise Gamgee</Nombre>
+                    <Familia>Gamgee</Familia>
+                    <NumeroPieNoCalza>8</NumeroPieNoCalza>
+                    <DistanciaMaximaComarca>110</DistanciaMaximaComarca>
+                </Hobbit>
+            </Hobbits>
+            <Mago>
+                <Nombre>Saruman</Nombre>
+                <Edad>5000</Edad>
+            </Mago>
+            <Hombre>
+                <Nombre>Aragorn</Nombre>
+                <DestrezaEspada>10</DestrezaEspada>
+            </Hombre>
+            <Elfo>
+                <Nombre>Légolas</Nombre>
+                <DistanciaMaximaArco>500</DistanciaMaximaArco>
+            </Elfo>
+            <Enano>
+                <Nombre>Gimli</Nombre>
+                <Estatura>4.5 pies</Estatura>
+                <CargaMaxima>200 libras</CargaMaxima>
+                <LongitudBarba>1.5 pies</LongitudBarba>
+            </Enano>
+        </Criaturas>
+    </Compania>
+
+    <Compania tipo="Exploradora">
+        <Nombre>Compania2</Nombre>
+        <LugarCreacion>Tierra Media</LugarCreacion>
+        <FechaFundacion>01/01/2001</FechaFundacion>
+        <Lider>
+            <Nombre>Aragorn</Nombre>
+            <FechaInicioLiderazgo>01/01/2010</FechaInicioLiderazgo>
+            <FechaFinLiderazgo>01/01/2020</FechaFinLiderazgo>
+        </Lider>
+        <Criaturas>
+            <Hobbits>
+                <Hobbit>
+                    <Nombre>Samwise Gamgee</Nombre>
+                    <Familia>Gamgee</Familia>
+                    <NumeroPieNoCalza>8</NumeroPieNoCalza>
+                    <DistanciaMaximaComarca>110</DistanciaMaximaComarca>
+                    <Anillo>
+                        <Nombre>Anillo2</Nombre>
+                        <Inscripcion>Otra inscripción aquí</Inscripcion>
+                        <FechaCreacion>01/01/1600</FechaCreacion>
+                    </Anillo>
+                </Hobbit>
+            </Hobbits>
+            <Mago>
+                <Nombre>Gandalf</Nombre>
+                <Edad>6000</Edad>
+            </Mago>
+            <Hombre>
+                <Nombre>Aragorn</Nombre>
+                <DestrezaEspada>9</DestrezaEspada>
+            </Hombre>
+            <Elfo>
+                <Nombre>Légolas</Nombre>
+                <DistanciaMaximaArco>600</DistanciaMaximaArco>
+            </Elfo>
+            <Enano>
+                <Nombre>Gloin</Nombre>
+                <Estatura>4.7 pies</Estatura>
+                <CargaMaxima>220 libras</CargaMaxima>
+                <LongitudBarba>1.7 pies</LongitudBarba>
+            </Enano>
+        </Criaturas>
+    </Compania>
+</CompaniasDelAnillo>

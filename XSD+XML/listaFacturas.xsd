@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listaFacturas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="factura" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="emisor" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" minOccurs="1"/>
+                                        <xs:element name="volumenVentas" type="xs:int" minOccurs="0"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="cif" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="pagador" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombrePag" type="xs:string" minOccurs="1"/>
+                                        <xs:element name="volumenVentasPag" type="xs:int" minOccurs="0"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="cif" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="importe" type="xs:string" minOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="fecha" type="xs:date"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

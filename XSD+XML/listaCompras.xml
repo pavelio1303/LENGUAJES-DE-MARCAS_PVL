@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listaCompras xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="listaCompras.xsd">
+    <venta>
+        <ventaCredito>
+            <fechaFinPago>22-5-2026</fechaFinPago>
+            <cantidadCredito>20</cantidadCredito>
+        </ventaCredito>
+    </venta>
+    <venta>
+        <ventaInmediata>
+            <cantidad>10</cantidad>
+            <divisa>euro</divisa>
+        </ventaInmediata>
+    </venta>
+</listaCompras>

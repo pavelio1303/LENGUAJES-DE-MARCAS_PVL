@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE catalogo [
+    <!ELEMENT catalogo (producto+)>  <!-- el '*'' marca que puede incluir 0 o mas elementos de dicho nombre
+                                        '+' indica que hay 1 o mas, no poner nada es siempre 1,
+                                        '?' indica que puede haber 1 o ninguno -->
+    <!ELEMENT producto (nombre,descripcion,precio,caracteristicas)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT caracteristicas (caracteristica+)>
+    <!ELEMENT caracteristica (#PCDATA)>
+        <!ATTLIST caracteristica nombre CDATA >
+]>
+
+<catalogo>
+    <producto>
+        <nombre>Ventilador</nombre>
+        <descripcion>Muy bonito muy fresco, alivia el verano</descripcion>
+        <precio>20</precio>
+           <caracteristicas>
+                <caracteristica nombre="Refresca">mucho</caracteristica>
+                <caracteristica nombre="Color">blanco</caracteristica>
+            </caracteristicas>
+    </producto>
+     <producto>
+        <nombre>Gorrocoptero</nombre>
+        <descripcion>Vuela, vuela alto...</descripcion>
+        <precio>1000</precio>
+            <caracteristicas>
+                <caracteristica nombre="Giro">muchísimos</caracteristica>
+                <caracteristica nombre="Color">amarillo</caracteristica>
+            </caracteristicas>
+    </producto>
+</catalogo>

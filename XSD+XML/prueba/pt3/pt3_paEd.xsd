@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pablo Jiménez y Edu Mendieta -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listaSistemas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sistemaEstelar" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="masa" type="xs:integer"/>
+                            <xs:element name="fecha" type="xs:date" minOccurs="0"/>
+                            <xs:element name="planetas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="planeta" minOccurs="0" maxOccurs="10">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombrePlaneta" type="xs:string"/>
+                                                    <xs:element name="tipo" type="xs:string"/>
+                                                    <xs:element name="habitable" type="xs:boolean"/>
+                                                    <xs:element name="satelites">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="satelite" minOccurs="0" maxOccurs="5">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="periodoOrbital" type="xs:integer"/>
+                                                                            <xs:element name="atmosfera" type="xs:boolean"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<inventario xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="inventario.xsd">
+    <lapiz></lapiz>
+    <cuaderno>
+        <numHojas>60</numHojas>
+        <estilo>cuadros</estilo>
+    </cuaderno>
+    <boligrafo>
+        <precio>2</precio>
+        <color>morado</color>
+    </boligrafo>
+    <cuaderno>
+        <numHojas>30</numHojas>
+        <estilo>dibujo</estilo>
+    </cuaderno>
+    <boligrafo>
+        <precio>1</precio>
+        <color>rojo</color>
+    </boligrafo>
+    <boligrafo>
+        <precio>1</precio>
+        <color>negro</color>
+    </boligrafo>
+    <boligrafo>
+        <precio>1</precio>
+        <color>azul</color>
+    </boligrafo>
+    <lapiz>
+        <dureza>2HB</dureza>
+    </lapiz>
+    <boligrafo>
+        <precio>1</precio>
+        <color>verde</color>
+    </boligrafo>
+</inventario>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<videojuegos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="videojuegos.xsd">
+    <videojuego>
+        <nombre>Fallout 3</nombre>
+        <descripcion>Los 50s pero con mutarachas</descripcion>
+        <fecha>
+            <anio>2010</anio>
+        </fecha>
+        <desarrollador>Bethesda</desarrollador>
+        <distribuidor>Bethesda</distribuidor>
+        <generos>
+            <genero>
+                <nombreGenero>RPG</nombreGenero>
+                <descripcionGenero>Cosas</descripcionGenero>
+            </genero>
+            <genero>
+                <nombreGenero>FPS</nombreGenero>
+                <descripcionGenero>PIUM PIUM</descripcionGenero>
+            </genero>
+        </generos>
+    </videojuego>
+</videojuegos>

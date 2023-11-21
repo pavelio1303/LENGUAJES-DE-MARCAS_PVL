@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pablo Jiménez Sánchez-->
+
+<!--- Cuartomilenio: El elemento raíz del documento XML.
+    Actividad: Debe haber mínimo tres actividades paranormales.
+        Nombre: El nombre de la actividad paranormal (entre 5 y 50 caracteres).
+        Ocurrencias: Las veces que ha ocurrido una actividad paranormal (entre 10 y 1000).
+        Investigador: El investigador que se encarga de esta actividad paranormal (solo puede haber uno o dos investigadores por actividad, pero al menos uno).
+            Nombre: nombre del investigador.
+            DNI: DNI del investigador (Longitud 9).
+                EXTRA (+0.5): Validar el DNI (8 números y una letra mayúscula).
+            Edad: edad del investigador (Entre 18 y 80).
+        Evidencias: Una lista de evidencias sobre la actividad paranormal.
+            Tipo: El tipo de evidencia (solo puede ser Foto, Audio, Vídeo o Testimonio).
+            Fecha: Fecha en que ocurrió la evidencia.
+            Ubicación: Lugar donde se obtuvo la evidencia (opcional).
+            Atributo obligatorio Pruebas: booleano que indica si hay pruebas físicas de la evidencia o no.-->
+
+<cuartoMilenio xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="pt4_pabloJimenez.xsd">
+    <actividad>
+        <nombre>Casa encantada de Maracena</nombre>
+        <ocurrencias>23</ocurrencias>
+        <investigador>
+            <nombre>Iker Jimenez</nombre>
+            <DNI>45339987H</DNI>
+            <edad>50</edad>
+        </investigador>
+        <evidencias>
+            <evidencia pruebas="true">
+                <tipo>video</tipo>
+                <fecha>2018-06-25</fecha>
+                <ubicacion>Recibidor de la casa</ubicacion>
+            </evidencia>
+        </evidencias>
+    </actividad>
+    <actividad>
+        <nombre>Carcel encantada de Albolote</nombre>
+        <ocurrencias>143</ocurrencias>
+        <investigador>
+            <nombre>Iker Jimenez</nombre>
+            <DNI>45339987H</DNI>
+            <edad>56</edad>
+        </investigador>
+        <investigador>
+            <nombre>Carmen Porter</nombre>
+            <DNI>34567334C</DNI>
+            <edad>49</edad>
+        </investigador>
+        <evidencias>
+            <evidencia pruebas="true">
+                <tipo>video</tipo>
+                <fecha>2022-11-04</fecha>
+                <ubicacion>Cantina de los vigilantes</ubicacion>
+            </evidencia>
+            <evidencia pruebas="false">
+                <tipo>testimonio</tipo>
+                <fecha>2023-01-18</fecha>
+                <ubicacion>Celda número 106</ubicacion>
+            </evidencia>
+        </evidencias>
+    </actividad>
+    <actividad>
+        <nombre>Asilo de Jun</nombre>
+        <ocurrencias>13</ocurrencias>
+        <investigador>
+            <nombre>Carmen Porter</nombre>
+            <DNI>34567334C</DNI>
+            <edad>49</edad>
+        </investigador>
+        <evidencias>
+            <evidencia pruebas="true">
+                <tipo>audio</tipo>
+                <fecha>2006-04-30</fecha>
+                <ubicacion>Habitación ubicada al subir las escaleras principales a la derecha</ubicacion>
+            </evidencia>
+            <evidencia pruebas="true">
+                <tipo>foto</tipo>
+                <fecha>2010-09-02</fecha>
+                <ubicacion>Entrada del asilo</ubicacion>
+            </evidencia>
+        </evidencias>
+    </actividad>
+</cuartoMilenio>

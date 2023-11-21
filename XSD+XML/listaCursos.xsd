@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listaCursos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="curso" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="alumno" maxOccurs="20">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="DNI">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:length value="9"></xs:length>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="apellido" type="xs:string"/>
+                                        <xs:element name="segundoApellido" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="listaAsignaturas" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="asignatura" maxOccurs="6">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="nombreAsignatura">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:enumeration value="Programación"/>
+                                                                            <xs:enumeration value="Bases de datos"/>
+                                                                            <xs:enumeration value="FOL"/>
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                                <xs:element name="profesor">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="NRP" type="xs:integer"></xs:element>
+                                                                            <xs:element name="nombreProfesor" type="xs:string"></xs:element>
+                                                                            <xs:element name="apellidoProfesor" type="xs:string"></xs:element>
+                                                                            <xs:element name="segundoApellido" type="xs:string" minOccurs="0"></xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="horasSemanales">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:integer">
+                                                                            <xs:minInclusive value="0"/>
+                                                                            <xs:maxInclusive value="10"/>
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="codigo" type="xs:integer" use="required"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+    </xs:element>
+</xs:schema>

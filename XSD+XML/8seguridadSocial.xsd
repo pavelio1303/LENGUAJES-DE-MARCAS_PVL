@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listadoAfiliados">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="afiliado" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DNI">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{8}[A-Z]"></xs:pattern> <!-- 'pattern' nos permite declarar patrones, en este caso 8 numeros del 0 al 9 y una letra mayúscula-->
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="5"></xs:minLength>
+                                        <xs:maxLength value="30"></xs:maxLength>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="apellidos" type="xs:string"></xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\+[0-9]{2}\s[0-9]{9,12}"></xs:pattern> <!-- ejemplo +34 958652637-->
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\w+@\w+\.\w+"></xs:pattern> <!-- '.' es cualquier caracter y '\' hace que se escriba literalmente como punto-->
+                                    </xs:restriction>                                   <!-- '\w' nos indica que se puede escribir letras minus y mayus y números-->
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="situacionLaboral">
+                                <xs:simpleType> 
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="En paro"></xs:enumeration>
+                                        <xs:enumeration value="En activo"></xs:enumeration>
+                                        <xs:enumeration value="Jubilado"></xs:enumeration>
+                                        <xs:enumeration value="Edad no laboral"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="fechaNacimiento"></xs:element>
+                            <xs:element name="listadoBajas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="baja" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="causaBaja" type="xs:string"></xs:element>
+                                                    <xs:element name="fechaInicio" type="xs:date"></xs:element>
+                                                    <xs:element name="fechaFin" type="xs:date" minOccurs="0">
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="listadoPrestaciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="prestacion" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="cantidadPercibida">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:integer">
+                                                                <xs:minInclusive value="0"></xs:minInclusive>
+                                                                <xs:maxExclusive value="3000"></xs:maxExclusive>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="fechaInicio" type="xs:date"></xs:element>
+                                                    <xs:element name="fechaFinal" type="xs:date"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="cobrada" type="xs:boolean" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

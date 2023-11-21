@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listaFacturas [
+    <!ELEMENT listaFacturas (factura+)>
+    
+    <!ELEMENT factura (emisor,pagador,importe)>
+    <!ATTLIST factura fecha CDATA #IMPLIED >   <!-- Ponemos esto porque es un atributo "ATT"-->
+                                                <!-- #IMPLIED quiere decir opcional-->
+    <!ELEMENT emisor (nombre,volumenVentas?)> 
+    <!ATTLIST emisor cif CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)> 
+    <!ELEMENT volumenVentas (#PCDATA)>
+    
+    <!ELEMENT pagador (nombrePag,volumenVentasPag?)>
+    <!ATTLIST pagador cif CDATA #REQUIRED>   <!-- #REQUIRED es que es obligatorio-->
+    <!ELEMENT nombrePag (#PCDATA)>
+    <!ELEMENT volumenVentasPag (#PCDATA)>
+    
+    <!ELEMENT importe (#PCDATA)>
+]>
+<listaFacturas>
+    <factura fecha="10/02/2056">
+        <emisor cif="">
+            <nombre>Carlos</nombre>
+            <volumenVentas>20</volumenVentas>
+        </emisor>
+        <pagador cif="">
+            <nombrePag>Juan</nombrePag>
+        </pagador>
+        <importe>300 rupias</importe>
+    </factura>
+    <factura>
+        <emisor cif="">
+            <nombre>Calito</nombre>
+            <volumenVentas>50</volumenVentas>
+        </emisor>
+        <pagador cif="">
+            <nombrePag>Manuel</nombrePag>
+            <volumenVentasPag>400</volumenVentasPag>
+        </pagador>
+        <importe>6000 rupias</importe>
+    </factura>
+</listaFacturas>

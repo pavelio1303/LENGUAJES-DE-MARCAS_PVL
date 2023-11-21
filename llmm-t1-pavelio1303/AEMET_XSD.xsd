@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="aemet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="origen">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="productor"></xs:element>
+                            <xs:element name="web"></xs:element>
+                            <xs:element name="enlace"></xs:element>
+                            <xs:element name="language"></xs:element>
+                            <xs:element name="copyright"></xs:element>
+                            <xs:element name="nota_legal"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="elaborado" type="xs:dateTime"></xs:element>
+                <xs:element name="nombre" type="xs:string"></xs:element>
+                <xs:element name="provincia" type="xs:string"></xs:element>
+                <xs:element name="prediccion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dia" minOccurs="7" maxOccurs="7"> <!-- He puesto 7 como minOccurs y maxOccurs porque parece que se almacenan las previsiones de una semana (7 días), aunque se carezca de datos de los días mas lejanos a priori no varía.-->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="prob_precipitacion" type="xs:string" maxOccurs="7" ></xs:element> <!-- maxOccurs en todos estos datos de los días puedo que se almacenan los datos de unas   franjas horarias concretas, máximo 7 y mínimo 1 (la del día completo)-->
+                                        <xs:element name="cota_nieve_prov" type="xs:string" maxOccurs="7"></xs:element>
+                                        <xs:element name="estado_cielo" type="xs:string" maxOccurs="7"></xs:element>
+                                        <xs:element name="viento" maxOccurs="7">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="direccion" type="xs:string"></xs:element>
+                                                    <xs:element name="velocidad" type="xs:string"></xs:element> <!-- Velocidad se encuentra como número (Integer) pero al encontrarse este apartado vacío en algunos    casos da error. Al ponerlo como string esto se soluciona, he ahí el porque de string-->
+                                                </xs:sequence>
+                                                <xs:attribute name="periodo" type="xs:string" use="optional"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="racha_max" type="xs:string" maxOccurs="7"></xs:element>
+                                        <xs:element name="temperatura">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="maxima" type="xs:integer"></xs:element>
+                                                    <xs:element name="minima" type="xs:integer"></xs:element>
+                                                    <xs:element name="dato" type="xs:string" minOccurs="0" maxOccurs="4"></xs:element> <!-- Valores entre 0 y 4 puesto que parece que se trabaja sobre 4 tramos horarios y cuanto más lejos se enceuntra el día pronosticado llegan a ser 2 tramos o incluso 0-->
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="sens_termica">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="maxima" type="xs:integer"></xs:element>
+                                                    <xs:element name="minima" type="xs:integer"></xs:element>
+                                                    <xs:element name="dato" type="xs:string" minOccurs="0" maxOccurs="4"></xs:element> <!-- Al igual en cada uno de los siguientes apartados puesto que los datos son más precisos cuando más cerca se encuentre el día-->
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="humedad_relativa">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="maxima" type="xs:integer"></xs:element>
+                                                    <xs:element name="minima" type="xs:integer"></xs:element>
+                                                    <xs:element name="dato" type="xs:string" minOccurs="0" maxOccurs="4"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="uv_max" type="xs:integer" minOccurs="0"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="fecha" type="xs:date" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE inventario [
+    <!ELEMENT inventario (lapiz | cuaderno | boligrafo)*>
+    <!ELEMENT lapiz (dureza?)>
+    <!ELEMENT dureza (#PCDATA)>
+    <!ELEMENT cuaderno (numHojas,estilo)>
+    <!ELEMENT numHojas (#PCDATA)>
+    <!ELEMENT estilo (#PCDATA)>
+    <!ELEMENT boligrafo (precio,color?)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+]>
+<inventario>
+    <lapiz></lapiz>
+    <cuaderno>
+        <numHojas>60</numHojas>
+        <estilo>cuadros</estilo>
+    </cuaderno>
+    <boligrafo>
+        <precio>2</precio>
+        <color>morado</color>
+    </boligrafo>
+    <cuaderno>
+        <numHojas>30</numHojas>
+        <estilo>dibujo</estilo>
+    </cuaderno>
+    <boligrafo>
+        <precio>1</precio>
+        <color>rojo</color>
+    </boligrafo>
+    <boligrafo>
+        <precio>1</precio>
+        <color>negro</color>
+    </boligrafo>
+    <boligrafo>
+        <precio>1</precio>
+        <color>azul</color>
+    </boligrafo>
+    <lapiz>
+        <dureza>2HB</dureza>
+    </lapiz>
+    <boligrafo>
+        <precio>1</precio>
+        <color>verde</color>
+    </boligrafo>
+</inventario>

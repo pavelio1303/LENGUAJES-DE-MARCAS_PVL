@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE carta [
+    <!ELEMENT carta (plato+)>
+    <!ELEMENT plato (nombre,descripcion,alergeno*,ingredientes,vegano?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT alergeno (#PCDATA)>
+    <!ELEMENT ingredientes (ingrediente+)>
+    <!ELEMENT ingrediente (nombreIn,cantidad,medida)>
+    <!ELEMENT vegano EMPTY>
+    <!ELEMENT nombreIn (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT medida (#PCDATA)>
+]>
+<carta>
+    <plato>
+        <nombre>Tortilla Francesa</nombre>
+        <descripcion>Un par de huevo liao no hay má pisha.</descripcion>
+        <alergeno>Huevo</alergeno>
+        <alergeno>Gluten</alergeno>
+        <ingredientes>
+            <ingrediente>
+                <nombreIn>Huevo</nombreIn>
+                <cantidad>2</cantidad>
+                <medida>unidades</medida>
+            </ingrediente>
+            <ingrediente>
+                <nombreIn>Sal</nombreIn>
+                <cantidad>10</cantidad>
+                <medida>miligramos</medida>
+            </ingrediente>
+        </ingredientes>
+        <vegano></vegano>
+    </plato>
+</carta>

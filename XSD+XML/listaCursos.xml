@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listaCursos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="listaCursos.xsd">
+    <curso>
+        <alumno>
+            <DNI>14586652N</DNI>
+            <nombre>15947</nombre>
+            <apellido>Lorem ipsum dolor sit.</apellido>
+            <listaAsignaturas>
+                <asignatura codigo="158">
+                    <nombreAsignatura>FOL</nombreAsignatura>
+                    <profesor>
+                        <NRP>18789</NRP>
+                        <nombreProfesor>
+                            Isaac
+                        </nombreProfesor>
+                        <apellidoProfesor>
+                            Newton
+                        </apellidoProfesor>
+                    </profesor>
+                    <horasSemanales>8</horasSemanales>
+                </asignatura>
+            </listaAsignaturas>
+        </alumno>
+    </curso>
+</listaCursos>
