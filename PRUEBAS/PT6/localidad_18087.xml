@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <origen>
+    <productor>Agencia Estatal de Meteorología - AEMET. Gobierno de España</productor>
+    <web>https://www.aemet.es</web>
+    <enlace>https://www.aemet.es/es/eltiempo/prediccion/municipios/granada-id18087</enlace>
+    <language>es</language>
+  </origen>
+  <elaborado>2023-11-30T08:21:40</elaborado>
+  <nombre>Granada</nombre>
+  <provincia>Granada</provincia>
+  <prediccion>
+    <dia fecha="2023-11-30">
+      <prob_precipitacion>100</prob_precipitacion>
+      <viento>
+        <direccion>SO</direccion>
+        <velocidad>10</velocidad>
+      </viento>
+      <temperatura>
+        <maxima>20</maxima>
+        <minima>11</minima>
+      </temperatura>
+      <humedad_relativa>
+        <maxima>100</maxima>
+        <minima>55</minima>
+      </humedad_relativa>
+      <uv_max>2</uv_max>
+    </dia>
+    <dia fecha="2023-12-01">
+      <prob_precipitacion>100</prob_precipitacion>
+      <viento>
+        <direccion>S</direccion>
+        <velocidad>10</velocidad>
+      </viento>
+      <temperatura>
+        <maxima>18</maxima>
+        <minima>2</minima>
+      </temperatura>
+      <humedad_relativa>
+        <maxima>100</maxima>
+        <minima>60</minima>
+      </humedad_relativa>
+      <uv_max>2</uv_max>
+    </dia>
+    <dia fecha="2023-12-02">
+      <prob_precipitacion>10</prob_precipitacion>
+      <viento>
+        <direccion>C</direccion>
+        <velocidad>0</velocidad>
+      </viento>
+      <temperatura>
+        <maxima>14</maxima>
+        <minima>1</minima>
+      </temperatura>
+      <humedad_relativa>
+        <maxima>100</maxima>
+        <minima>40</minima>
+      </humedad_relativa>
+      <uv_max>2</uv_max>
+    </dia>
+  </prediccion>
+</root>
