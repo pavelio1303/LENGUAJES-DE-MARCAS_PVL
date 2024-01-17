@@ -1,0 +1,79 @@
+<!-- 
+Crea un formulario de registro para una empresa de cines que pida:
+    -Nombre
+    -Apellidos
+    -Email
+    -Contraseña (investiga input para contraseñas)
+    -Edad
+    -Fecha de nacimiento (investiga input de fechas)
+    -Un checkbox para elegir los cines que visitas (añade 4 cines)
+    -Un radio para indicar si se tiene algún tipo de descuento especial
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Cine</title>
+</head>
+<body>
+
+    <h1>FORMLARIO DE REGISTRO CINES</h1>
+
+    <form action="registroCine.php" method="post">
+
+        <h2>DATOS PERSONALES</h2>
+
+        <label for="inputNombre">Nombre:</label>
+        <input type="text" id="inputNombre" name="nombre">
+
+        <label for="inputApellidos">Apellidos:</label>
+        <input type="text" id="inputApellidos" name="Apellidos"><br>
+
+        <br>
+
+        <label for="inputEdad">Edad:</label>
+        <input type="number" id="inputEdad" name="Edad" step="1" min="0">
+
+        <label for="inputFechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="inputFechaNacimiento" name="FechaNacimiento"><br>
+
+        <br>
+
+
+        <h2>REGISTRO</h2>
+
+        <label for="inputEmail">E-mail:</label>
+        <input type="email" id="inputEmail" name="email">
+
+        <label for="inputContrasenia">Contraseña:</label>
+        <input type="password" id="inputContrasenia" name="Contrasenia">
+
+        <h2>DESCUENTO</h2>
+
+        <input type="radio" id="descSi" name="descuento" value="SI">
+        <label for="descSi"> SI </label><br>
+
+        <input type="radio" id="descNo" name="descuento" value="NO">
+        <label for="descNo"> NO </label><br>
+
+        <h2>SELECCIONE LOS CINES QUE MÁS FRECUENTA</h2>
+        
+        <input type="checkbox" id="cineKN" name="cineKN" value="cineKN">
+        <label for="cineKN"> Kinepolis Nevada </label><br>
+
+        <input type="checkbox" id="cineKG" name="cineKG" value="cineKG">
+        <label for="cineKG"> Kinepolis Granada </label><br>
+
+        <input type="checkbox" id="cineCS" name="cineCS" value="cineCS">
+        <label for="cineCS"> Cines Serrallo </label><br>
+
+        <input type="checkbox" id="cineCN" name="cineCN" value="cineCN">
+        <label for="cineCN"> Cines Neptuno </label><br>
+
+        <br>
+
+        <input type="submit">
+
+    </form>
+</body>
