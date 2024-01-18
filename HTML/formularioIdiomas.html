@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Cine</title>
+</head>
+<body>
+
+    <form action="registroCine.php" method="post">
+        <fieldset>
+            <legend>Rellenar</legend>
+    
+            <input type="radio" id="idiomaIn" name="idioma" value="INGLES">
+            <label for="idiomaIn"> Inglés </label><br>
+    
+            <input type="radio" id="idiomaAl" name="idioma" value="ALEMAN">
+            <label for="idiomaAl"> Alemán </label><br>
+    
+            <input type="radio" id="idiomaFr" name="idioma" value="FRANCES">
+            <label for="idiomaFr"> Francés </label><br>
+    
+            <select name="formato" id="formato">
+                <option value="USB" selected>USB</option>
+                <option value="WEB">Web</option>
+                <option value="FISICO">Físico</option>
+            </select>
+        </fieldset><br>
+    
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            
+            <label for="inputNombre">Nombre:</label>
+            <input type="text" id="inputNombre" name="nombre"><br><br>
+
+            <label for="inputApellidos">Apellidos:</label>
+            <input type="text" id="inputApellidos" name="Apellidos"><br><br>
+
+            <select name="sexo" id="sexo" multiple>
+                <option value="HOMBRE" selected>Hombre</option>
+                <option value="MUJER">Mujer</option>
+                <option value="NC">No lo sé</option>
+            </select><br>
+    
+            <input type="checkbox" id="sexoH" name="sexoH" value="HOMBRE">
+            <label for="sexoH"> Hombre </label><br>
+    
+            <input type="checkbox" id="sexoM" name="sexoM" value="MUJER">
+            <label for="sexoM"> Mujer </label><br>
+    
+            <label for="inputFechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="inputFechaNacimiento" name="FechaNacimiento"><br>
+
+        </fieldset><br>
+
+        <input type="submit">
+    </form>
+</body>
