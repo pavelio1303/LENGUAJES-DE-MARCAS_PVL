@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Procesador</title>
+</head>
+<body>
+    <form action="registroProcesador.php">
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+    
+            <label for="inputFecha">Elija una fecha:</label>
+            <input type="date" id="inputFecha" name="fecha" value="2024-01-24" disabled><br><br>
+    
+            <label for="fichero">Elija un fichero:</label>
+            <input type="file" id="fichero" name="fichero"><br><br>
+    
+            <input type="radio" id="radioAmd" name="procesador" value="AMD">
+            <label for="radioAmd">AMD</label>
+    
+            <input type="radio" id="radioi5" name="procesador" value="i5">
+            <label for="radioi5">Intel i5</label>
+    
+            <input type="radio" id="radioi7" name="procesador" value="i7">
+            <label for="radioi7">Intel i7</label><br>
+
+        </fieldset><br>
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+
+            <input type="radio" id="Matematicas" name="asignatura" value="matematicas">
+            <label for="Matematicas">Matemáticas</label>
+    
+            <input type="radio" id="Historia" name="asignatura" value="historia" checked>
+            <label for="Historia">Historia</label>
+    
+            <input type="radio" id="Geografia" name="asignatura" value="geografia">
+            <label for="Geografia">Geografía</label>
+
+            <input type="radio" id="Lengua" name="asignatura" value="lengua">
+            <label for="Lengua">Lengua</label><br><br>
+
+            <label for="inputNombre">Nombre:</label>
+            <input type="text" id="inputNombre" name="nombre" placeholder="Rodrigo"><br><br>
+
+            <label for="inputApellidos">Apellidos:</label>
+            <input type="text" id="inputApellidos" name="apellidos" placeholder="Díaz de Vivar"><br><br>
+
+            <label for="inputDireccion">Direccion:</label>
+            <input type="text" id="inputDireccion" name="direccion" placeholder="Calle Castilla, 5, 2C"><br><br>
+
+            <textarea name="texto" id="textArea" cols="30" rows="10" placeholder="Escriba aquí lo que siente..."></textarea><br>
+
+            <label for="seleccionColor">Elija un color:</label>
+            <input type="color" id="seleccionColor" name="color" value="#ff0000"><br><br>
+
+            <label for="inputFecha2">Elija una fecha:</label>
+            <input type="date" id="inputFecha2" name="fecha2"><br><br>
+
+            <select name="idioma" id="inputIdioma">
+                <option value="EN">Inglés</option>
+                <option value="ES">Español</option>
+                <option value="FR">Francés</option>
+                <option value="DE">Alemán</option>
+                <option value="PR">Portugués</option>
+            </select><br><br>
+            
+            <label for="hora" min="08:00" max="20:00">Elija una hora:</label>
+            <input type="time" id="hora" name="hora"><br><br>
+
+            <input type="checkbox" id="inputSexo" name="sexoH" value="hombre">
+            <label for="inputSexo"> Hombre </label>
+    
+            <input type="checkbox" id="inputSexo" name="sexoM" value="mujer">
+            <label for="inputSexo"> Mujer </label>
+
+            <input type="checkbox" id="inputSexo" name="sexoN" value="N/C">
+            <label for="inputSexo"> N/C </label><br>
+
+            <input type="submit" name="enviar" id="enviar">
+
+        </fieldset>
+    </form>
+</body>
