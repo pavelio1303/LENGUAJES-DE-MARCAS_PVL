@@ -1,0 +1,22 @@
+h1,h2{
+    color:rgb(103, 3, 202);
+    background-color: lavender;
+}
+
+h2.h2tuneado{
+    color:purple;
+    background-color: bisque;
+}
+
+p{
+    color:peru;
+    border-style: solid;
+    border-width: 1.3px 1.3px;
+    border-color: green;
+    border-radius: 5px;
+}
+
+h2{
+    border: rgb(103, 3, 202) 3px;
+    border-radius: 2px;
+}
