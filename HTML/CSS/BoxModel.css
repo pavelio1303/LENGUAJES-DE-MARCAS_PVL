@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+}
+
+div{
+    height: 200px;
+    width: 200px;
+    background-color: antiquewhite;
+    border: green 3px solid;
+}
+
+#lorem{
+    border:red 2px solid;
+    margin: auto;
+}
+
+h1{
+    border:red 2px solid;
+    margin: 0px;
+}

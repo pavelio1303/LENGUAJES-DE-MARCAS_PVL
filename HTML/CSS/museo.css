@@ -1,0 +1,19 @@
+body.fondo{
+    color:aquamarine;
+}
+
+img.marcoFotos{
+    border-style: solid;
+    border-width: 10px;
+    border-color: #E64D00;
+    padding: 20px;
+    margin: 20px;
+}
+
+div.marcoExterior{
+    border-style: solid;
+    border-width: 10px;
+    border-color: #E64D00;
+    padding: 20px;
+    margin: 20px;
+}
