@@ -1,19 +1,35 @@
 body.fondo{
-    color:aquamarine;
+    background-color:aquamarine;
+}
+
+h2.titulo2{
+    color: #004D46;
 }
 
 img.marcoFotos{
+    background-color:white;
     border-style: solid;
     border-width: 10px;
     border-color: #E64D00;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
 }
 
 div.marcoExterior{
+    background-color:white;
     border-style: solid;
     border-width: 10px;
     border-color: #E64D00;
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
+    margin-right: 20px;
+}
+
+div.marcoExterior2{
+    background-color:white;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #FFAA33;
+    padding: 10px;
     margin: 20px;
 }
