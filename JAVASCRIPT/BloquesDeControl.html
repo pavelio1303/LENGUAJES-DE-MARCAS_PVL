@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Bloques de control</title>
+</head>
+
+<script>
+    function validadEdad(){
+        let edad = parseInt(document.getElementById("edad").value);
+
+        if(edad < 18){
+            window.alert("Eres menor de edad, onde vas?");
+        }else{
+            window.alert("Pasa maquina que sos adultero");
+        }
+    }
+</script>
+
+<body>
+    <p>¿Eres mayor de edad? </p>
+
+    <label for="edad">Introduce tu edad:</label>
+    <input id="edad" type="number"><br> 
+
+    <button onclick="validadEdad()">Validar edad</button>
+
+</body>
+
+</html>
