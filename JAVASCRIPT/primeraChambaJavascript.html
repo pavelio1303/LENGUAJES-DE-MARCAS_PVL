@@ -20,9 +20,18 @@
     // Sustituye elementos que tengan la Id indicada por el elemento dado
     // document.getElementById("lorem").innerHTML = "El resultado de sumar " + numero1 + " y "+ numero2 + " es: " + resultado + ".";
 
+    // Hacemos función para sustituir la función de leer elemento
+    function read(idElemento){
+        return document.getElementById(idElemento).value;
+    }
+
+    function readInt(idElemento){
+        return parseInt(document.getElementById(idElemento).value);
+    }
+
     function sumar(){
-        let numero1 = parseInt(document.getElementById("numero1").value);
-        let numero2 = parseInt(document.getElementById("numero2").value);
+        let numero1 = readInt("numero1");
+        let numero2 = readInt("numero2");
 
         let resultado = numero1 + numero2;
 
@@ -30,8 +39,8 @@
     }
 
     function restar(){
-        let numero1 = parseInt(document.getElementById("numero1").value);
-        let numero2 = parseInt(document.getElementById("numero2").value);
+        let numero1 = readInt("numero1");
+        let numero2 = readInt("numero2");
 
         let resultado = numero1 - numero2;
 
@@ -39,8 +48,8 @@
     }
 
     function multiplicar(){
-        let numero1 = parseInt(document.getElementById("numero1").value);
-        let numero2 = parseInt(document.getElementById("numero2").value);
+        let numero1 = readInt("numero1");
+        let numero2 = readInt("numero2");
 
         let resultado = numero1 * numero2;
 
@@ -48,8 +57,8 @@
     }
 
     function dividir(){
-        let numero1 = parseInt(document.getElementById("numero1").value);
-        let numero2 = parseInt(document.getElementById("numero2").value);
+        let numero1 = readInt("numero1");
+        let numero2 = readInt("numero2");
 
         let resultado = numero1 / numero2;
 
