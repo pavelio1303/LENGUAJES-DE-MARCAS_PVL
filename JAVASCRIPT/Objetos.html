@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Objetos</title>
+    </head>
+
+    <script>
+        const car = {type:"Fiat", 
+                    model:"500", 
+                    color:"white", 
+                    img:"https://upload.wikimedia.org/wikipedia/commons/a/a1/1970_Fiat_500_L_--_2011_DC_1.jpg",
+                    ecoFriendly: false, 
+                    motor:{
+                        HP:800, 
+                        electric: false
+                        }
+                    }
+
+        car.motor.HP = 63;
+
+        console.log(car.motor.HP);
+
+        console.log(car.motor);
+
+        console.log(car);
+    </script>
+
+    <body>
+        
+    </body>
+</html>
