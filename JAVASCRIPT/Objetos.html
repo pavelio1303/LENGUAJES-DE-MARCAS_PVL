@@ -1,32 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Objetos</title>
-    </head>
 
-    <script>
-        const car = {type:"Fiat", 
-                    model:"500", 
-                    color:"white", 
-                    img:"https://upload.wikimedia.org/wikipedia/commons/a/a1/1970_Fiat_500_L_--_2011_DC_1.jpg",
-                    ecoFriendly: false, 
-                    motor:{
-                        HP:800, 
-                        electric: false
-                        }
-                    }
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos</title>
+</head>
 
-        car.motor.HP = 63;
+<style>
 
-        console.log(car.motor.HP);
+    div{
+        margin: 5px;
+    }
 
-        console.log(car.motor);
+    .fondo{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        console.log(car);
-    </script>
+    .fichaCoche1{
+        display: flex;
+        width: 200px;
+        justify-content: center;
+        border: 2px black solid;
+        flex-wrap: wrap;
+    }
 
-    <body>
-        
-    </body>
+    .fichaCoche2{
+        display: flex;
+        width: 200px;
+        justify-content: center;
+        border: 2px black solid;
+        flex-wrap: wrap;
+    }
+
+    #divFotoCoche1{
+        margin: 5px;
+    }
+
+    #divFotoCoche2{
+        margin: 5px;
+    }
+
+    img{
+        width: 100%
+    }
+
+</style>
+
+<body>
+    <div class="fondo">
+        <div class="fichaCoche1">
+            <div id="divFotoCoche1">
+                <img id="fotoCoche1">
+            </div>
+            <h2 id="tipoModeloCoche1"></h2>
+            <ul id="caracteristicasCoche1"></ul>
+        </div>
+
+        <div class="fichaCoche2">
+            <div id="divFotoCoche2">
+                <img id="fotoCoche2">
+            </div>
+            <h2 id="tipoModeloCoche2"></h2>
+            <ul id="caracteristicasCoche2"></ul>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function aniadirElementoLista(texto, lista) {
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = texto; // Asigno un texto al nuevo elemento
+
+        // Añado el nuevo elemento a la lista
+        lista.appendChild(nuevoElemento);
+    }
+
+    const car1 = {
+        type: "Fiat",
+        model: "500",
+        color: "yellow",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXF6i2SAEP9gsaO8z3xk0CWhxEQeLhvS7mIMULjkfXTQ&s",
+        ecoFriendly: false,
+        motor: {
+            HP: 800,
+            electric: false
+        }
+    };
+
+    document.getElementById("fotoCoche1").src = car1.img;
+    document.getElementById("tipoModeloCoche1").innerHTML = car1.type + " " + car1.model;
+
+    const listaCaracteristicasCoche1 = document.getElementById("caracteristicasCoche1");
+
+    aniadirElementoLista("Color: " + car1.color, listaCaracteristicasCoche1);
+    aniadirElementoLista("Potencia: " + car1.motor.HP, listaCaracteristicasCoche1);
+
+    const car2 = {
+        type: "Prosche",
+        model: "911",
+        color: "grey",
+        img: "https://imagenes.km77.com/fotos/bbtcontent/clippingnew/KM7KPH20230802_0035/full-original.jpg",
+        ecoFriendly: false,
+        motor: {
+            HP: 2800,
+            electric: false
+        }
+    };
+
+    document.getElementById("fotoCoche2").src = car2.img;
+    document.getElementById("tipoModeloCoche2").innerHTML = car2.type + " " + car2.model;
+
+    const listaCaracteristicasCoche2 = document.getElementById("caracteristicasCoche2");
+
+    aniadirElementoLista("Color: " + car2.color, listaCaracteristicasCoche2);
+    aniadirElementoLista("Potencia: " + car2.motor.HP, listaCaracteristicasCoche2);
+
+</script>
+
 </html>
