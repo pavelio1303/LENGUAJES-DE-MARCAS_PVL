@@ -13,7 +13,7 @@
 
         let cantidadElementosLista = lista.childElementCount;
 
-        // 'const' para datos complejos y 'let' para normales
+        // 'const' para datos complejos (nodos, listas, arrays...) y 'let' para normales (texto, numeros y booleanos)
         const nuevoElemento = document.createElement("li"); 
         nuevoElemento.innerHTML = "Elemento " + (cantidadElementosLista + 1);
 
@@ -50,7 +50,7 @@
         <li>Elemento 3</li>
     </ul>
 
-    <button onclick="reemplazarUltimoElementoLista()">Borrar elemento</button>
+    <button onclick="reemplazarUltimoElementoLista()">Editar elemento</button>
 
 </body>
 
