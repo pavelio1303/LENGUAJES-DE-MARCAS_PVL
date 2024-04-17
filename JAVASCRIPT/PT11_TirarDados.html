@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dados D&D</title>
+</head>
+
+<script>
+    // Aquí guardo la última cara de dado que lancé
+    let ultimaCara;
+
+    // Esta función me ayuda a generar un número aleatorio dentro de un rango dado
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // Con esta función simulo el lanzamiento de un dado con un número específico de caras
+    function tirarDado(caras) {
+        ultimaCara = caras; // Guardo el número de caras del dado que lancé
+        let tirada = randomNumber(1, caras); // Genero un número aleatorio entre 1 y el número de caras del dado
+        let resultadoTirada = ""; // Inicializo una cadena para guardar el resultado del lanzamiento
+        
+        // Verifico si mi tirada fue un crítico o una pifia, y muestro una alerta en consecuencia
+        if (tirada == caras) {
+            resultadoTirada = " (¡Crítico!)";
+            window.alert(resultadoTirada);
+        } else if (tirada == 1) {
+            resultadoTirada = " (¡Pifia!)";
+            window.alert(resultadoTirada);
+        }
+
+        // Obtengo el elemento <ul> donde se mostrará el historial de mis tiradas
+        const lista = document.getElementById("historialTiradas");
+
+        // Creo un nuevo elemento <li> para mostrar el resultado de mi lanzamiento
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = "D" + caras + ": " + tirada + resultadoTirada; // Asigno un texto al nuevo elemento
+
+        // Agrego el nuevo elemento al final de mi historial de tiradas
+        lista.appendChild(nuevoElemento);
+    }
+
+    // Esta función me permite repetir mi última tirada de dado
+    function repetirTirada() {
+        const lista = document.getElementById("historialTiradas"); // Obtengo el elemento <ul> del historial de tiradas
+        lista.lastElementChild.remove(); // Elimino el último elemento <li> (la última tirada)
+        tirarDado(ultimaCara); // Vuelvo a lanzar el dado con el mismo número de caras que la última tirada
+    }
+</script>
+
+<body>
+    <h1>Dados D&D</h1>
+
+    <!-- Botones para lanzar diferentes tipos de dados -->
+    <button onclick="tirarDado(4)">D4</button>
+    <button onclick="tirarDado(6)">D6</button>
+    <button onclick="tirarDado(8)">D8</button>
+    <button onclick="tirarDado(10)">D10</button>
+    <button onclick="tirarDado(12)">D12</button>
+    <button onclick="tirarDado(20)">D20</button>
+    <button onclick="repetirTirada()">Repetir Tirada</button>
+
+    <!-- Lista para mostrar el historial de mis tiradas -->
+    <ul id="historialTiradas">
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulando el DOM</title>
+</head>
+
+<script>
+
+    function aniadirElementoLista() {
+        // Obtengo el elemento de la lista por su ID
+        const lista = document.getElementById("lista");
+        // Cuento la cantidad de elementos hijos en la lista
+        let cantidadElementosLista = lista.childElementCount;
+
+        // Creo un nuevo elemento <li>
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = "Elemento " + (cantidadElementosLista + 1); // Asigno un texto al nuevo elemento
+        
+        // Añado el nuevo elemento a la lista
+        lista.appendChild(nuevoElemento);
+    }
+
+    function borrarUltimoElementoLista() {
+        const lista = document.getElementById("lista");
+        lista.lastElementChild.remove(); // Borro el último hijo de la lista
+    }
+
+    function reemplazarUltimoElementoLista() {
+        const lista = document.getElementById("lista");
+        
+        const nuevoElemento = document.createElement("li"); // Creo un nuevo elemento <li>
+        nuevoElemento.innerHTML = "Elemento editado"; // Asigno un texto al nuevo elemento
+       
+        // Reemplazo el último hijo de la lista con el nuevo elemento
+        lista.replaceChild(nuevoElemento, lista.lastElementChild);
+
+        // La función replaceChild() reemplaza un nodo hijo especificado de un elemento padre con otro nodo.
+        // Requiere dos argumentos:
+        //   1. El nuevo nodo que se utilizará como reemplazo.
+        //   2. El nodo hijo existente que se desea reemplazar.
+
+    }
+</script>
+
+<body>
+
+    <h1>Añadir elementos</h1>
+
+    <ul id="lista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <button onclick="aniadirElementoLista()">Añadir elemento</button>
+    <button onclick="borrarUltimoElementoLista()">Borrar elemento</button>
+    <button onclick="reemplazarUltimoElementoLista()">Editar elemento</button>
+
+</body>
+
+</html>

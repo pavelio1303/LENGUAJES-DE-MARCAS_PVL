@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos String</title>
+</head>
+
+<script>
+
+    // Defino una variable llamada 'texto' que contiene una cadena de texto.
+    let texto = "Ñorem ipsum dolor sit amet, consectetur adipisicing sit . Fugit, at.";
+
+    // Imprimo la longitud de la cadena de texto.
+    console.log(texto.length);
+
+    // Imprimo el carácter en la posición 0 usando el método charAt().
+    console.log(texto.charAt(0));
+    // También puedo acceder al carácter en la posición 0 directamente con corchetes.
+    console.log(texto[0]);
+
+    // Imprimo los primeros 5 caracteres de la cadena usando slice().
+    console.log(texto.slice(0, 5)); // Indico la posición de inicio y de fin.
+
+    // Imprimo una subcadena de 5 caracteres a partir del carácter en la posición 15 usando substr().
+    console.log(texto.substr(15, 5)); // Indico la posición de inicio y la cantidad de caracteres que quiero.
+
+    // Imprimo la cadena en mayúsculas usando toUpperCase().
+    console.log(texto.toUpperCase()); // También podría usar toLowerCase().
+
+    // Imprimo la posición de la primera ocurrencia de "sit" en la cadena.
+    console.log(texto.indexOf("sit"));
+    // Imprimo la posición de la última ocurrencia de "sit" en la cadena.
+    console.log(texto.lastIndexOf("sit"));
+    // Imprimo -1 porque "Lorena" no está presente en la cadena.
+    console.log(texto.indexOf("Lorena"));
+
+    // Imprimo true si "sit" está presente en la cadena, de lo contrario, imprimo false.
+    console.log(texto.includes("sit"));
+    // Imprimo false porque "Lorena" no está presente en la cadena.
+    console.log(texto.includes("Lorena"));
+
+    // Imprimo true si la cadena comienza con "Ñorem", de lo contrario, imprimo false.
+    console.log(texto.startsWith("Ñorem"));
+
+    // Imprimo true si la cadena termina con "at.", de lo contrario, imprimo false.
+    console.log(texto.endsWith("at."));
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

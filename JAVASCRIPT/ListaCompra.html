@@ -7,17 +7,28 @@
 </head>
 
 <script>
-    function aniadirElementoLista(){
 
-        const lista = document.getElementById("lista");
+    let totalCompra = 0;
 
-        let cantidadElementosLista = lista.childElementCount;
+    function aniadirElementoLista() {
 
-        // 'const' para datos complejos y 'let' para normales
-        const nuevoElemento = document.createElement("li"); 
-        nuevoElemento.innerHTML = (cantidadElementosLista) + " " + (precioProducto);
+        const listaCompra = document.getElementById("listaProductos");
+        let nombreProducto = document.getElementById("inputNombreProducto").value;
+        let precioProducto = parseFloat(document.getElementById("inputPrecioProducto").value);
 
-        document.getElementById("lista").appendChild(nuevoElemento);
+        // Creo un nuevo elemento <li>
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = nombreProducto + " ........... " + precioProducto + "€"; // Asigno un texto al nuevo elemento
+        
+        // Añado el nuevo elemento a la lista
+        listaCompra.appendChild(nuevoElemento);
+
+        // Cuento la cantidad de elementos hijos en la lista
+        let cantidadProductos = listaCompra.childElementCount;
+
+        // Actualizo el total
+        totalCompra+=precioProducto;
+        document.getElementById("totalCompraH2").innerHTML="Total "+ cantidadProductos +" productos: "+totalCompra+"€";
     }
 </script>
 
@@ -26,13 +37,21 @@
     <!-- Crea una página que permita añadir elementos (nombre y precio) 
         a una lista de la compra y muestre el importe total de la compra -->
 
-    <label for="producto">Producto:</label>
-    <input type="text" id="producto" name="producto"><br><br>
-    <label for="precio">Precio:</label>
-    <input type="text" id="precio" name="precio"><br><br>
-    <!--<input type="submit" value="Submit"> -->
+    <h1>Añadir elementos</h1>
+    
+    <label for="inputNombreProducto">Nombre del producto:</label>
+    <input id="inputNombreProducto" type="text"><br>
 
-    <ul></ul>
+    <label for="inputPrecioProducto">Precio del producto:</label>
+    <input id="inputPrecioProducto" type="number"><br>
+
+    <button onclick="aniadirElementoLista()">Añadir producto</button>
+    
+    <ol id="listaProductos">
+    </ol>
+
+    <h2 id="totalCompraH2"></h2>
+
 
 </body>
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<script>
+    // Función para leer el valor de un input a partir de su id
+    function readInput(idElemento) {
+        return document.getElementById(idElemento).value;
+    }
+
+    // Función para leer el texto de un elemento a partir de su id
+    function readElement(idElemento) {
+        return document.getElementById(idElemento).innerHTML;
+    }
+
+    function buscar(idInput, idTexto) {
+        let buscado = readInput(idInput);
+
+        let texto = readElement(idTexto);
+
+        window.alert(texto.includes(buscado));
+    }
+
+</script>
+
+<body>
+
+    <input id="buscado" type="text">
+    <button onclick="buscar('buscado', 'texto2')">Buscar</button>
+
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorum vel quasi doloremque maiores
+        debitis ipsum nostrum sapiente dolores laborum quos exercitationem voluptate ex totam alias, rerum voluptatem
+        repellat suscipit temporibus asperiores voluptatibus commodi. Vel, blanditiis deserunt veritatis quasi
+        reiciendis consequatur pariatur impedit quam minima et assumenda libero repudiandae id quod. Molestias similique
+        rem et beatae, non voluptates. Provident animi, dolores perspiciatis iure ut cum repellat porro? Natus atque
+        cupiditate itaque. Delectus, quisquam amet velit corrupti quo non? Repudiandae, iusto veritatis nemo deleniti
+        sit iure officiis, laboriosam sapiente, error saepe commodi aliquam nostrum earum voluptate ratione quisquam
+        quae ut id?</p>
+
+    <p id="texto2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, cupiditate vel reiciendis ipsa minima saepe
+        vitae officiis Tortuga quam consequatur eligendi, accusantium dignissimos at necessitatibus molestiae animi corrupti
+        doloribus magnam mollitia.
+    </p>
+
+</body>
+
+</html>

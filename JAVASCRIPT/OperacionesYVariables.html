@@ -2,92 +2,64 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
     <title>Operaciones y variables</title>
 </head>
 
-<style>
-    
-</style>
-
 <script>
-    //Declarar variables
-    let numero1 = 7; 
-    let numero2 = 6;
-    //let resultado = numero1 + numero2;
 
-    // Una suerte de print para la consola del navegador (f12)
-    //console.log("El resultado de sumar " + numero1 + " y "+ numero2 + " es: " + resultado + "."); 
-
-    // Hace que el mensaje aparezca en una alerta (ventanida emergente)
-    //window.alert("El resultado de sumar " + numero1 + " y "+ numero2 + " es: " + resultado + ".");  
-
-    // Sustituye elementos que tengan la Id indicada por el elemento dado
-    // document.getElementById("lorem").innerHTML = "El resultado de sumar " + numero1 + " y "+ numero2 + " es: " + resultado + ".";
-
-    // Hacemos función para sustituir la función de leer elemento
-    function read(idElemento){
-        return document.getElementById(idElemento).value;
+    // Función para leer el valor de un elemento a partir de su id
+    function read(idElemento) {
+        return document.getElementById(idElemento).value
     }
 
-    function readInt(idElemento){
+    // Función para leer el valor de un elemento a partir de su id y convertirlo a entero
+    function readInt(idElemento) {
         return parseInt(document.getElementById(idElemento).value);
     }
+    
+    function sumar() {
+        // Leo los valores de los inputs
+        numero1 = readInt("numero1");
+        numero2 = readInt("numero2");
 
-    function sumar(){
-        let numero1 = readInt("numero1");
-        let numero2 = readInt("numero2");
-
-        let resultado = numero1 + numero2;
-
-        document.getElementById("lorem").innerHTML = "El resultado de sumar " + numero1 + " y "+ numero2 + " es: " + resultado + ".";
+        // Sumo los números y muestro el resultado en en el elemento con id="resultado" de la página
+        document.getElementById("resultado").innerHTML = numero1 + numero2;
     }
 
-    function restar(){
-        let numero1 = readInt("numero1");
-        let numero2 = readInt("numero2");
-
-        let resultado = numero1 - numero2;
-
-        document.getElementById("lorem").innerHTML = "El resultado de restar " + numero1 + " y "+ numero2 + " es: " + resultado + ".";
+    function restar() {
+        numero1 = readInt("numero1");
+        numero2 = readInt("numero2");
+        document.getElementById("resultado").innerHTML = numero1 - numero2;
     }
 
-    function multiplicar(){
-        let numero1 = readInt("numero1");
-        let numero2 = readInt("numero2");
-
-        let resultado = numero1 * numero2;
-
-        document.getElementById("lorem").innerHTML = "El resultado de multiplicar " + numero1 + " y "+ numero2 + " es: " + resultado + ".";
+    function multiplicar() {
+        numero1 = readInt("numero1");
+        numero2 = readInt("numero2");
+        document.getElementById("resultado").innerHTML = numero1 * numero2;
     }
 
-    function dividir(){
-        let numero1 = readInt("numero1");
-        let numero2 = readInt("numero2");
-
-        let resultado = numero1 / numero2;
-
-        document.getElementById("lorem").innerHTML = "El resultado de dividir " + numero1 + " y "+ numero2 + " es: " + resultado + ".";
+    function dividir() {
+        numero1 = parseInt(read("numero1"));
+        numero2 = parseInt(read("numero2"));
+        document.getElementById("resultado").innerHTML = numero1 / numero2;
     }
+
 </script>
 
 <body>
-    <!-- Realiza una acción dada, en ese caso al pulsar el botón, salta una alerta-->
-    <button onclick="window.alert('ALERTA!!!')">ALERTA</button><br>
 
-    <!-- Creamos dos input para introducir números y los suma-->
-    <label for="numero1">Numero 1:</label>
-    <input id="numero1" type="number"><br> 
+    <label for="numero1">Número 1:</label>
+    <input id="numero1" type="number"><br>
 
-    <label for="numero2">Numero 2:</label>
-    <input id="numero2" type="number"><br> 
+    <label for="numero2">Número 2:</label>
+    <input id="numero2" type="number"><br>
 
     <button onclick="sumar()">SUMAR</button>
     <button onclick="restar()">RESTAR</button>
     <button onclick="multiplicar()">MULTIPLICAR</button>
-    <button onclick="dividir()">DIVIDIR</button><br>
+    <button onclick="dividir()">DIVIDIR</button>
 
-    <p id="lorem">RESULTADO AQUI.</p>
+    <h1 id="resultado"></h1>
 
 </body>
 

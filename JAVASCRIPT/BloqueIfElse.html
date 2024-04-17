@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Bloques de control</title>
+</head>
+
+<script>
+
+    // Función para leer el valor de un elemento a partir de su id
+    function read(idElemento) {
+        return document.getElementById(idElemento).value
+    }
+
+    // Función para leer el valor de un elemento a partir de su id y convertirlo a entero
+    function readInt(idElemento) {
+        return parseInt(document.getElementById(idElemento).value);
+    }
+
+    function validarEdad() {
+        let edad = readInt("edad");
+        let resultado;
+
+        if (edad < 18) {
+            resultado = "Eres menor de edad";
+
+            // Redirijo a otra página web
+            window.location.replace("http://www.google.com")
+
+            // Otra opción para redirigir a otra página web:
+            // window.location.href = "http://www.google.com";
+
+            // - window.location.replace() reemplaza la página actual en el historial de navegación, sin dejar rastro de la página anterior.
+            // - window.location.href cambia la ubicación de la página actual y agrega la página anterior al historial de navegación.
+
+        } else {
+            resultado = "Eres mayor de edad";
+        }
+
+        // Muestro el mensaje en el elemento con id="resultado" de la página
+        document.getElementById("resultado").innerHTML = resultado;
+    }
+
+</script>
+
+<body>
+
+    <label for="edad">Edad:</label>
+    <input id="edad" type="number"><br>
+    <button onclick="validarEdad()">Validar edad</button>
+
+    <h1 id="resultado"></h1>
+
+</body>
+
+</html>
