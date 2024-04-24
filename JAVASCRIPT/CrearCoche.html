@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear coche</title>
+</head>
+
+<style>
+
+</style>
+
+<script>
+
+    function readInput(idElemento) {
+        return document.getElementById(idElemento).value;
+    }
+
+    function readRadio(nombreElemento){
+        return document.querySelector("input[name='"+nombreElemento+"']:checked").value;
+    }
+  
+    function aniadirElementoLista(texto, lista) {
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = texto; // Asigno un texto al nuevo elemento
+
+        // Añado el nuevo elemento a la lista
+        lista.appendChild(nuevoElemento);
+    }
+
+    function aniadirCoche() {
+        const nuevoCoche = {};
+        nuevoCoche.motor = {};
+
+        nuevoCoche.marca = readInput("inputMarca");
+        nuevoCoche.modelo = readInput("inputModelo");
+        nuevoCoche.color = readInput("inputColor");
+        nuevoCoche.img = readInput("inputFoto");
+        
+        nuevoCoche.ecoFriendly = readRadio("ecoFriendly");
+        nuevoCoche.motor.potencia = readInput("inputPotencia");
+        nuevoCoche.motor.electrico = readRadio("electrico");
+
+        renderizarCoche(nuevoCoche)
+    }
+
+    function renderizarCoche(coche){
+
+        const fichaCoche = document.createElement("div");
+        const fotoCoche = document.createElement("img");
+        const marcaModeloCoche = document.createElement("h2");
+        const listaAtributos = document.createElement("ul");
+
+        fotoCoche.src = coche.img;
+        marcaModeloCoche.innerHTML = coche.marca + " " + coche.modelo;
+
+        aniadirElementoLista("Color: " + coche.color, listaAtributos);
+        aniadirElementoLista("Potencia: " + coche.motor.potencia, listaAtributos);
+
+        fichaCoche.appendChild(fotoCoche);
+        fichaCoche.appendChild(marcaModeloCoche);
+        fichaCoche.appendChild(listaAtributos);
+
+        const catalogoCoches = document.getElementById("catalogoCoches");
+        catalogoCoches.appendChild(fichaCoche);
+
+    }
+
+</script>
+
+<body>
+    <h1>Añadir coche</h1>
+    
+    <label for="inputMarca">Marca:</label>
+    <input id="inputMarca" type="text"><br>
+
+    <label for="inputModelo">Modelo:</label>
+    <input id="inputModelo" type="text"><br>
+
+    <label for="inputColor">Color:</label>
+    <input id="inputColor" type="text"><br>
+
+    <label for="inputFoto">Foto:</label>
+    <input id="inputFoto" type="text"><br>
+
+    <label for="inputPotencia">Potencia:</label>
+    <input id="inputPotencia" type="number"><br>
+
+    <label for="inputEco">Eco:</label>
+    <input type="radio" id="esEco" name="ecoFriendly" value="true">
+    <label for="esEco">SI</label> 
+    <input type="radio" id="noEsEco" name="ecoFriendly" value="false">
+    <label for="noEsEco">NO</label><br>
+
+    <label for="inputElectrico">Eléctrico:</label>
+    <input type="radio" id="esElectrico" name="electrico" value="true">
+    <label for="esElectrico">SI</label> 
+    <input type="radio" id="noEsElectrico" name="electrico" value="false">
+    <label for="noEsElectrico">NO</label><br>
+
+    <button onclick="aniadirCoche()">Añadir coche</button>
+
+    <div id="catalogoCoches">
+
+    </div>
+</body>
+</html>
