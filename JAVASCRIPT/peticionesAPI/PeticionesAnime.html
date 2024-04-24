@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedir Datos Anime</title>
+</head>
+
+<style>
+    #listaAnimes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div{
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+
+<script>
+
+    async function fetchData() {
+        const response = await fetch(`https://api.jikan.moe/v4/anime`);
+        const data = await response.json();
+        return data;
+    }
+
+    // async function printData() {
+    //     const animeData = await fetchData();
+    //     document.getElementById("anime").innerHTML=animeData.data[0].title;
+    // }
+
+    async function printAnimeName() {
+        const animeData = await fetchData();
+
+        const body = document.getElementById("body");
+
+        const divBody = document.getElementById("listaAnimes");
+
+        for (i=0 ; i < animeData.data.length ; i++){
+
+            const divAnime = document.createElement("div");
+            divBody.appendChild(divAnime);
+
+            const fotoAnime = document.createElement("img");
+            fotoAnime.src = animeData.data[i].images.webp.image_url;
+            divAnime.appendChild(fotoAnime);
+
+            const nombreAnime = document.createElement("h3");
+            nombreAnime.textContent = animeData.data[i].title;
+            divAnime.appendChild(nombreAnime);
+
+            const descAnime = document.createElement("p");
+            descAnime.textContent = animeData.data[i].synopsis;
+            divAnime.appendChild(descAnime);
+        }
+    }
+    
+    printAnimeName();
+
+</script>
+
+<body id="body">
+    <h1>TITULOS ANIMES</h1>
+    <div id="listaAnimes"></div>
+</body>
+
+</html>
